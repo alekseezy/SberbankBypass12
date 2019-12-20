@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85E1DD7323AD70830049F2CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1DD7223AD70830049F2CE /* UIKit.framework */; };
+		85E1DD7523AD70830049F2CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1DD7423AD70830049F2CE /* Foundation.framework */; };
+		85E1DD7723AD70830049F2CE /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1DD7623AD70830049F2CE /* CydiaSubstrate.framework */; };
+		85E1DD8623AD70830049F2CE /* SberbankBypass12.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85E1DD8523AD70830049F2CE /* SberbankBypass12.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		85E1DD6F23AD70830049F2CE /* SberbankBypass12.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SberbankBypass12.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E1DD7223AD70830049F2CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		85E1DD7423AD70830049F2CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		85E1DD7623AD70830049F2CE /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		85E1DD7B23AD70830049F2CE /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
+		85E1DD7F23AD70830049F2CE /* SberbankBypass12.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SberbankBypass12.plist; sourceTree = "<group>"; };
+		85E1DD8023AD70830049F2CE /* SberbankBypass12Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SberbankBypass12Icon.png; sourceTree = "<group>"; };
+		85E1DD8123AD70830049F2CE /* SberbankBypass12Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SberbankBypass12Icon@2x.png"; sourceTree = "<group>"; };
+		85E1DD8323AD70830049F2CE /* SberbankBypass12-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SberbankBypass12-Prefix.pch"; path = "../SberbankBypass12-Prefix.pch"; sourceTree = "<group>"; };
+		85E1DD8423AD70830049F2CE /* SberbankBypass12.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SberbankBypass12.xm; sourceTree = "<group>"; };
+		85E1DD8523AD70830049F2CE /* SberbankBypass12.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SberbankBypass12.mm; sourceTree = "<group>"; };
+		85E1DD8923AD70830049F2CE /* SberbankBypass12.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SberbankBypass12.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85E1DD6B23AD70830049F2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1DD7323AD70830049F2CE /* UIKit.framework in Frameworks */,
+				85E1DD7523AD70830049F2CE /* Foundation.framework in Frameworks */,
+				85E1DD7723AD70830049F2CE /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85E1DD6423AD70830049F2CE = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7823AD70830049F2CE /* SberbankBypass12 */,
+				85E1DD7123AD70830049F2CE /* Frameworks */,
+				85E1DD7023AD70830049F2CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85E1DD7023AD70830049F2CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD6F23AD70830049F2CE /* SberbankBypass12.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85E1DD7123AD70830049F2CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7223AD70830049F2CE /* UIKit.framework */,
+				85E1DD7423AD70830049F2CE /* Foundation.framework */,
+				85E1DD7623AD70830049F2CE /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85E1DD7823AD70830049F2CE /* SberbankBypass12 */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD8423AD70830049F2CE /* SberbankBypass12.xm */,
+				85E1DD8523AD70830049F2CE /* SberbankBypass12.mm */,
+				85E1DD7923AD70830049F2CE /* Package */,
+				85E1DD8223AD70830049F2CE /* Supporting Files */,
+			);
+			path = SberbankBypass12;
+			sourceTree = "<group>";
+		};
+		85E1DD7923AD70830049F2CE /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7A23AD70830049F2CE /* DEBIAN */,
+				85E1DD7C23AD70830049F2CE /* Library */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		85E1DD7A23AD70830049F2CE /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7B23AD70830049F2CE /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
+		85E1DD7C23AD70830049F2CE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7D23AD70830049F2CE /* PreferenceLoader */,
+				85E1DD8723AD70830049F2CE /* MobileSubstrate */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		85E1DD7D23AD70830049F2CE /* PreferenceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7E23AD70830049F2CE /* Preferences */,
+			);
+			path = PreferenceLoader;
+			sourceTree = "<group>";
+		};
+		85E1DD7E23AD70830049F2CE /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD7F23AD70830049F2CE /* SberbankBypass12.plist */,
+				85E1DD8023AD70830049F2CE /* SberbankBypass12Icon.png */,
+				85E1DD8123AD70830049F2CE /* SberbankBypass12Icon@2x.png */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		85E1DD8223AD70830049F2CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD8323AD70830049F2CE /* SberbankBypass12-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85E1DD8723AD70830049F2CE /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD8823AD70830049F2CE /* DynamicLibraries */,
+			);
+			path = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		85E1DD8823AD70830049F2CE /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				85E1DD8923AD70830049F2CE /* SberbankBypass12.plist */,
+			);
+			path = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		85E1DD6C23AD70830049F2CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		85E1DD6E23AD70830049F2CE /* SberbankBypass12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E1DD8C23AD70830049F2CE /* Build configuration list for PBXNativeTarget "SberbankBypass12" */;
+			buildPhases = (
+				85E1DD6923AD70830049F2CE /* ShellScript */,
+				85E1DD6A23AD70830049F2CE /* Sources */,
+				85E1DD6B23AD70830049F2CE /* Frameworks */,
+				85E1DD6C23AD70830049F2CE /* Headers */,
+				85E1DD6D23AD70830049F2CE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SberbankBypass12;
+			productName = SberbankBypass12;
+			productReference = 85E1DD6F23AD70830049F2CE /* SberbankBypass12.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85E1DD6523AD70830049F2CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				TargetAttributes = {
+					85E1DD6E23AD70830049F2CE = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 85E1DD6823AD70830049F2CE /* Build configuration list for PBXProject "SberbankBypass12" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85E1DD6423AD70830049F2CE;
+			productRefGroup = 85E1DD7023AD70830049F2CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85E1DD6E23AD70830049F2CE /* SberbankBypass12 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85E1DD6923AD70830049F2CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+		85E1DD6D23AD70830049F2CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85E1DD6A23AD70830049F2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1DD8623AD70830049F2CE /* SberbankBypass12.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		85E1DD8A23AD70830049F2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"SberbankBypass12\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85E1DD8B23AD70830049F2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"SberbankBypass12\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		85E1DD8D23AD70830049F2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AKF4ZBG2R6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SberbankBypass12/SberbankBypass12-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85E1DD8E23AD70830049F2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AKF4ZBG2R6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SberbankBypass12/SberbankBypass12-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85E1DD6823AD70830049F2CE /* Build configuration list for PBXProject "SberbankBypass12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E1DD8A23AD70830049F2CE /* Release */,
+				85E1DD8B23AD70830049F2CE /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E1DD8C23AD70830049F2CE /* Build configuration list for PBXNativeTarget "SberbankBypass12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E1DD8D23AD70830049F2CE /* Release */,
+				85E1DD8E23AD70830049F2CE /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85E1DD6523AD70830049F2CE /* Project object */;
+}
