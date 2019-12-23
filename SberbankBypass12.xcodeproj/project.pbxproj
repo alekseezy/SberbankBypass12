@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,11 +19,8 @@
 		85E1DD7423AD70830049F2CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85E1DD7623AD70830049F2CE /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
 		85E1DD7B23AD70830049F2CE /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
-		85E1DD7F23AD70830049F2CE /* SberbankBypass12.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SberbankBypass12.plist; sourceTree = "<group>"; };
-		85E1DD8023AD70830049F2CE /* SberbankBypass12Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SberbankBypass12Icon.png; sourceTree = "<group>"; };
-		85E1DD8123AD70830049F2CE /* SberbankBypass12Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SberbankBypass12Icon@2x.png"; sourceTree = "<group>"; };
 		85E1DD8323AD70830049F2CE /* SberbankBypass12-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SberbankBypass12-Prefix.pch"; path = "../SberbankBypass12-Prefix.pch"; sourceTree = "<group>"; };
-		85E1DD8423AD70830049F2CE /* SberbankBypass12.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SberbankBypass12.xm; sourceTree = "<group>"; };
+		85E1DD8423AD70830049F2CE /* SberbankBypass12.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = SberbankBypass12.xm; sourceTree = "<group>"; };
 		85E1DD8523AD70830049F2CE /* SberbankBypass12.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SberbankBypass12.mm; sourceTree = "<group>"; };
 		85E1DD8923AD70830049F2CE /* SberbankBypass12.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SberbankBypass12.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,28 +97,9 @@
 		85E1DD7C23AD70830049F2CE /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				85E1DD7D23AD70830049F2CE /* PreferenceLoader */,
 				85E1DD8723AD70830049F2CE /* MobileSubstrate */,
 			);
 			path = Library;
-			sourceTree = "<group>";
-		};
-		85E1DD7D23AD70830049F2CE /* PreferenceLoader */ = {
-			isa = PBXGroup;
-			children = (
-				85E1DD7E23AD70830049F2CE /* Preferences */,
-			);
-			path = PreferenceLoader;
-			sourceTree = "<group>";
-		};
-		85E1DD7E23AD70830049F2CE /* Preferences */ = {
-			isa = PBXGroup;
-			children = (
-				85E1DD7F23AD70830049F2CE /* SberbankBypass12.plist */,
-				85E1DD8023AD70830049F2CE /* SberbankBypass12Icon.png */,
-				85E1DD8123AD70830049F2CE /* SberbankBypass12Icon@2x.png */,
-			);
-			path = Preferences;
 			sourceTree = "<group>";
 		};
 		85E1DD8223AD70830049F2CE /* Supporting Files */ = {
@@ -194,7 +172,7 @@
 				};
 			};
 			buildConfigurationList = 85E1DD6823AD70830049F2CE /* Build configuration list for PBXProject "SberbankBypass12" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -274,7 +252,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
 				MonkeyDevPath = /opt/MonkeyDev;
 				MonkeyDevTheosPath = /opt/theos;
@@ -306,7 +284,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
 				MonkeyDevPath = /opt/MonkeyDev;
 				MonkeyDevTheosPath = /opt/theos;
@@ -321,6 +299,7 @@
 		85E1DD8D23AD70830049F2CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -330,16 +309,18 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SberbankBypass12/SberbankBypass12-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = "";
+				MonkeyDevDeviceIP = 192.168.2.3;
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = "";
+				MonkeyDevDevicePort = 22;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -347,6 +328,7 @@
 		85E1DD8E23AD70830049F2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -356,16 +338,18 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SberbankBypass12/SberbankBypass12-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MonkeyDevBuildPackageOnAnyBuild = NO;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = "";
+				MonkeyDevDeviceIP = 192.168.2.3;
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = "";
+				MonkeyDevDevicePort = 22;
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;

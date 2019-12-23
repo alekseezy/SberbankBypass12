@@ -6,7 +6,9 @@
 	<dict>
 		<key>Bundles</key>
 		<array>
-			<string>com.apple.springboard</string>
+			<string>sberbank.Middleware</string>
+			<string>ru.sberbank.onlineiphone</string>
+			<string>ru.sberbank.online</string>
 		</array>
 	</dict>
 </dict>
