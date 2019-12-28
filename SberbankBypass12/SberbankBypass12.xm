@@ -1,5 +1,3 @@
-// See http://iphonedevwiki.net/index.php/Logos
-
 #if TARGET_OS_SIMULATOR
 #error Do not support the simulator, please use the real iPhone Device.
 #endif
@@ -90,10 +88,10 @@
     withIntermediateDirectories:(BOOL)createIntermediates
                      attributes:(NSDictionary<NSFileAttributeKey, id> *)attributes
                           error:(NSError * _Nullable *)error {
-        NSString *jbDetectionPath = @"/var/mobile/Applications/JailbreakChecking";
-        NSString *jbDetectionBypassPath = @"/var/mobile/Applications1/JailbreakChecking";
-
         NSLog(@"App trying to create directory at path: %@", path);
+                              
+        NSString *jbDetectionPath = @"/var/mobile/Applications/JailbreakChecking";
+        NSString *jbDetectionBypassPath = @"/var/mobile/ApplicationsSberbankBypass/JailbreakChecking";
 
         if ([jbDetectionPath isEqualToString: path]) {
             
@@ -101,8 +99,6 @@
             BOOL result = %orig(jbDetectionBypassPath, createIntermediates, attributes, &errorFromOrig);
 
             *error = errorFromOrig;
-            
-            NSLog(@"Access denied for path: %@", path);
             
             NSLog(@"Result of removeItemAtPath:");
             NSLog(@"Result: %d", (int)result);
@@ -119,7 +115,7 @@
         NSLog(@"Removing item at path: %@", path);
 
         NSString *jbDetectionPath = @"/var/mobile/Applications/JailbreakChecking";
-        NSString *jbDetectionBypassPath = @"/var/mobile/Applications1/JailbreakChecking";
+        NSString *jbDetectionBypassPath = @"/var/mobile/ApplicationsSberbankBypass/JailbreakChecking";
 
         if ([jbDetectionPath isEqualToString: path]) {
             NSLog(@"JB Detecion tries remove item at path: %@", path);
@@ -140,8 +136,4 @@
 
         return %orig;
     }
-%end
-
-%hook CLSFileManager
-
 %end

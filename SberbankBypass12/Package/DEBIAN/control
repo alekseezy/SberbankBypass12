@@ -1,7 +1,7 @@
 Package: com.gamzakovdev.sberbankbypass12
 Name: SberankBypass (iOS 12+)
 Depends: firmware (>= 12.0), mobilesubstrate, preferenceloader
-Version: 0.0.3
+Version: 0.0-3-3
 Architecture: iphoneos-arm
 Description: Jailbreak Detection bypass for ios 12 and above. (64 bit only)
 Maintainer: Gamzakov <justgamzakov@gmail.com>

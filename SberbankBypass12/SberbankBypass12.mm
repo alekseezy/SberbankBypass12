@@ -1,6 +1,4 @@
 #line 1 "/Users/gamzakov/Projects/Xcode/SberbankBypass12/SberbankBypass12/SberbankBypass12.xm"
-
-
 #if TARGET_OS_SIMULATOR
 #error Do not support the simulator, please use the real iPhone Device.
 #endif
@@ -26,10 +24,10 @@
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class NSFileManager; @class CLSFileManager; 
+@class NSFileManager; 
 static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *); static BOOL _logos_method$_ungrouped$NSFileManager$fileExistsAtPath$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *); static BOOL (*_logos_orig$_ungrouped$NSFileManager$createDirectoryAtPath$attributes$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, NSDictionary *); static BOOL _logos_method$_ungrouped$NSFileManager$createDirectoryAtPath$attributes$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, NSDictionary *); static BOOL (*_logos_orig$_ungrouped$NSFileManager$createDirectoryAtPath$withIntermediateDirectories$attributes$error$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, BOOL, NSDictionary<NSFileAttributeKey, id> *, NSError * _Nullable *); static BOOL _logos_method$_ungrouped$NSFileManager$createDirectoryAtPath$withIntermediateDirectories$attributes$error$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, BOOL, NSDictionary<NSFileAttributeKey, id> *, NSError * _Nullable *); static BOOL (*_logos_orig$_ungrouped$NSFileManager$removeItemAtPath$error$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, NSError * _Nullable *); static BOOL _logos_method$_ungrouped$NSFileManager$removeItemAtPath$error$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, NSError * _Nullable *); 
 
-#line 7 "/Users/gamzakov/Projects/Xcode/SberbankBypass12/SberbankBypass12/SberbankBypass12.xm"
+#line 5 "/Users/gamzakov/Projects/Xcode/SberbankBypass12/SberbankBypass12/SberbankBypass12.xm"
 
     static BOOL _logos_method$_ungrouped$NSFileManager$fileExistsAtPath$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, NSString * path) {
         NSArray *jbChecks = [NSArray arrayWithObjects:
@@ -116,10 +114,10 @@ static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$)(_LOGOS_SEL
 
 
     static BOOL _logos_method$_ungrouped$NSFileManager$createDirectoryAtPath$withIntermediateDirectories$attributes$error$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, NSString * path, BOOL createIntermediates, NSDictionary<NSFileAttributeKey, id> * attributes, NSError * _Nullable * error) {
-        NSString *jbDetectionPath = @"/var/mobile/Applications/JailbreakChecking";
-        NSString *jbDetectionBypassPath = @"/var/mobile/Applications1/JailbreakChecking";
-
         NSLog(@"App trying to create directory at path: %@", path);
+                              
+        NSString *jbDetectionPath = @"/var/mobile/Applications/JailbreakChecking";
+        NSString *jbDetectionBypassPath = @"/var/mobile/ApplicationsSberbankBypass/JailbreakChecking";
 
         if ([jbDetectionPath isEqualToString: path]) {
             
@@ -127,8 +125,6 @@ static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$)(_LOGOS_SEL
             BOOL result = _logos_orig$_ungrouped$NSFileManager$createDirectoryAtPath$withIntermediateDirectories$attributes$error$(self, _cmd, jbDetectionBypassPath, createIntermediates, attributes, &errorFromOrig);
 
             *error = errorFromOrig;
-            
-            NSLog(@"Access denied for path: %@", path);
             
             NSLog(@"Result of removeItemAtPath:");
             NSLog(@"Result: %d", (int)result);
@@ -145,7 +141,7 @@ static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$)(_LOGOS_SEL
         NSLog(@"Removing item at path: %@", path);
 
         NSString *jbDetectionPath = @"/var/mobile/Applications/JailbreakChecking";
-        NSString *jbDetectionBypassPath = @"/var/mobile/Applications1/JailbreakChecking";
+        NSString *jbDetectionBypassPath = @"/var/mobile/ApplicationsSberbankBypass/JailbreakChecking";
 
         if ([jbDetectionPath isEqualToString: path]) {
             NSLog(@"JB Detecion tries remove item at path: %@", path);
@@ -167,10 +163,6 @@ static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$)(_LOGOS_SEL
         return _logos_orig$_ungrouped$NSFileManager$removeItemAtPath$error$(self, _cmd, path, error);
     }
 
-
-
-
-
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$NSFileManager = objc_getClass("NSFileManager"); MSHookMessageEx(_logos_class$_ungrouped$NSFileManager, @selector(fileExistsAtPath:), (IMP)&_logos_method$_ungrouped$NSFileManager$fileExistsAtPath$, (IMP*)&_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$);MSHookMessageEx(_logos_class$_ungrouped$NSFileManager, @selector(createDirectoryAtPath:attributes:), (IMP)&_logos_method$_ungrouped$NSFileManager$createDirectoryAtPath$attributes$, (IMP*)&_logos_orig$_ungrouped$NSFileManager$createDirectoryAtPath$attributes$);MSHookMessageEx(_logos_class$_ungrouped$NSFileManager, @selector(createDirectoryAtPath:withIntermediateDirectories:attributes:error:), (IMP)&_logos_method$_ungrouped$NSFileManager$createDirectoryAtPath$withIntermediateDirectories$attributes$error$, (IMP*)&_logos_orig$_ungrouped$NSFileManager$createDirectoryAtPath$withIntermediateDirectories$attributes$error$);MSHookMessageEx(_logos_class$_ungrouped$NSFileManager, @selector(removeItemAtPath:error:), (IMP)&_logos_method$_ungrouped$NSFileManager$removeItemAtPath$error$, (IMP*)&_logos_orig$_ungrouped$NSFileManager$removeItemAtPath$error$);} }
-#line 148 "/Users/gamzakov/Projects/Xcode/SberbankBypass12/SberbankBypass12/SberbankBypass12.xm"
+#line 140 "/Users/gamzakov/Projects/Xcode/SberbankBypass12/SberbankBypass12/SberbankBypass12.xm"

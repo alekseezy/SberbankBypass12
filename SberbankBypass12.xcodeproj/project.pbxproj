@@ -205,7 +205,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos\n";
 		};
 		85E1DD6D23AD70830049F2CE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -222,7 +222,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -288,7 +288,7 @@
 				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
 				MonkeyDevPath = /opt/MonkeyDev;
 				MonkeyDevTheosPath = /opt/theos;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"SberbankBypass12\\\"\"";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +300,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -310,13 +314,13 @@
 				GCC_PREFIX_HEADER = "SberbankBypass12/SberbankBypass12-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevBuildPackageOnAnyBuild = YES;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = 192.168.2.3;
+				MonkeyDevDeviceIP = "";
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = 22;
-				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = NO;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,6 +333,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -339,15 +347,16 @@
 				GCC_PREFIX_HEADER = "SberbankBypass12/SberbankBypass12-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevBuildPackageOnAnyBuild = YES;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = 192.168.2.3;
+				MonkeyDevDeviceIP = "";
 				MonkeyDevDevicePassword = "";
-				MonkeyDevDevicePort = 22;
-				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = NO;
 				MonkeyDevInstallOnProfiling = YES;
 				MonkeyDevkillProcessOnInstall = SpringBoard;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
